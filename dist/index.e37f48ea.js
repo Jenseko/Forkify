@@ -2498,7 +2498,8 @@ const loadRecipe = async function(id) {
         };
         console.log(state.recipe);
     } catch (err) {
-        alert(err);
+        // Temp error handling
+        console.error(`${err} \u{1F324}\u{FE0F}`);
     }
 };
 
@@ -2517,8 +2518,9 @@ const getJSON = async function(url) {
         const res = await fetch(url);
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message} (${res.status})`);
+        return data;
     } catch (err) {
-        console.log(err);
+        throw err;
     }
 };
 
