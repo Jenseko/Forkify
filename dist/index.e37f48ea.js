@@ -2976,6 +2976,7 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
     render(data) {
+        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const markup = this._generateMarkup();
         this._clear();
@@ -2998,13 +2999,13 @@ class View {
     renderError(message = this._errorMessage) {
         const markup = `
     <div class="error">
-            <div>
-              <svg>
-                <use href="${(0, _iconsSvgDefault.default)}_icon-alert-triangle"></use>
-              </svg>
+        <div>
+            <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+            </svg>
             </div>
             <p>${message}</p>
-          </div>`;
+        </div>`;
         this._clear();
         this._parentElement.insertAdjacentHTML("afterbegin", markup);
     }
@@ -3013,7 +3014,7 @@ class View {
     <div class="message">
             <div>
               <svg>
-                <use href="${(0, _iconsSvgDefault.default)}_icon-smile"></use>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
               </svg>
             </div>
             <p>${message}</p>
@@ -3055,6 +3056,8 @@ var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector(".results");
+    _errorMessage = "No recipes found for your query! Please try again. :)";
+    _message = "";
     _generateMarkup() {
         console.log(this._data);
         return this._data.map(this._generateMarkupPreview).join("");
