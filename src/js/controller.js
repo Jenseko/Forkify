@@ -7,6 +7,11 @@ import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import { async } from 'regenerator-runtime';
 
+// NO JavaScript --> this comes from parcel
+if (module.hot) {
+  module.hot.accept();
+}
+
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -36,7 +41,6 @@ const controlSearchResults = async function () {
     await model.loadSearchResults(query);
 
     // 3.) Render results
-    console.log(model.state.search.results);
     resultsView.render(model.state.search.results);
   } catch (err) {
     console.log(err);

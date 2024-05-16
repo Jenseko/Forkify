@@ -46,25 +46,22 @@ class RecipeView extends View {
             <div class="recipe__info-buttons">
               <button class="btn--tiny btn--increase-servings">
                 <svg>
-                  <use href="${icons}_icon-minus-circle"></use>
+                  <use href="${icons}#icon-minus-circle"></use>
                 </svg>
               </button>
               <button class="btn--tiny btn--increase-servings">
                 <svg>
-                  <use href="${icons}_icon-plus-circle"></use>
+                  <use href="${icons}#icon-plus-circle"></use>
                 </svg>
               </button>
             </div>
           </div>
 
           <div class="recipe__user-generated">
-            <svg>
-              <use href="${icons}_icon-user"></use>
-            </svg>
           </div>
           <button class="btn--round">
             <svg class="">
-              <use href="${icons}_icon-bookmark-fill"></use>
+              <use href="${icons}#icon-bookmark-fill"></use>
             </svg>
           </button>
         </div>
