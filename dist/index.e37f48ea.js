@@ -2635,7 +2635,7 @@ class RecipeView extends (0, _viewJsDefault.default) {
             console.log(btn);
             const { updateTo } = btn.dataset;
             console.log(updateTo);
-            if (updateTo > 0) handler(+updateTo);
+            if (+updateTo > 0) handler(+updateTo);
         });
     }
     _generateMarkup() {
@@ -2669,7 +2669,7 @@ class RecipeView extends (0, _viewJsDefault.default) {
                 </svg>
               </button>
 
-              <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings + 1}>
+              <button class="btn--tiny btn--update-servings" data-update-to="${this._data.servings + 1}">
                 <svg>
                   <use href="${0, _iconsSvgDefault.default}#icon-plus-circle"></use>
                 </svg>
