@@ -2,6 +2,8 @@
 
 <p>Here, you can search for popular meals and check the ingredients to see if you have them at home. It is also possible to upload your own recipes.</p>
 
+<p>This app is constructed using the MVC pattern. The MVC architecture separates the business logic, data and user interface, which makes it easier to maintain and extend the application.</p>
+
 Demo: https://forkify-jens.netlify.app
 
 ### Build with <br>
