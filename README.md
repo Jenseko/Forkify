@@ -2,7 +2,7 @@
 
 <p>Here, you can search for popular meals and view the location where you completed them. You can choose between running or cycling training, specify the duration of your workout, and indicate the distance you covered.</p>
 
-Demo: 
+Demo: https://forkify-jens.netlify.app
 
 ### Build with <br>
 <ul>
